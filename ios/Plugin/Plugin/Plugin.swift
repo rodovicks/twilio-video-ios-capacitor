@@ -13,12 +13,12 @@ public class TwilioVideoIosCapacitor: CAPPlugin {
     
     @objc func joinRoom(_ call: CAPPluginCall) {
         
-        guard let roomName = call.options["roomName"] as? String else {
+        guard let roomName = call.getString("roomName") else {
             call.reject("Must provide an roomName")
             return
         }
         
-        guard let accessToken = call.options["accessToken"] as? String else {
+        guard let accessToken = call.getString("accessToken") else {
             call.reject("Must provide an accessToken")
             return
         }
