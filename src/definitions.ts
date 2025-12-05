@@ -1,10 +1,9 @@
-declare global {
-  interface PluginRegistry {
-    TwilioVideoIos?: TwilioVideoIos;
-  }
+export interface JoinRoomOptions {
+  roomName: string;
+  accessToken: string;
 }
 
-export interface TwilioVideoIos {
-  joinRoom(options: {roomName: String, accessToken: String}): Promise<any>;
-  disconnect(): Promise<any>;
+export interface TwilioVideoIosPlugin {
+  joinRoom(options: JoinRoomOptions): Promise<void>;
+  disconnect(): Promise<void>;
 }

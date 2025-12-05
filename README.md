@@ -25,21 +25,13 @@ Since the current implementation of Ionic/PWA apps on iOS run on top of WKWebVie
 This plugin uses the Twilio Video iOS Library and uses version 2.4 of Capacitor
 
 ```ts
-import { Plugins } from '@capacitor/core';
-const { TwilioVideoIos } = Plugins
+import { TwilioVideoIos } from '@brunorodovicks/twilio-video-ios-capacitor';
 
-. . .
 // to connect
-await TwilioVideoIos.joinRoom({ roomName: roomName, accessToken: accessToken})
-// to close connection:
-await TwilioVideoIos.disconnect()
+await TwilioVideoIos.joinRoom({ roomName, accessToken });
 
-
-// to get a disconnect event was clicked on the native side
-window.addEventListener('TwilioVideoIosCapacitor:disconnect', () => {
-  history.back();
-});
-. . .
+// to close connection
+await TwilioVideoIos.disconnect();
 ```
 
 ## Api

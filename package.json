@@ -8,7 +8,7 @@
   "types": "dist/esm/index.d.ts",
   "scripts": {
     "build": "npm run clean && tsc",
-    "clean": "rm -rf ./dist",
+    "clean": "node -e \"require('fs').rmSync('dist', { recursive: true, force: true });\"",
     "watch": "tsc --watch",
     "prepublishOnly": "npm run build"
   },
