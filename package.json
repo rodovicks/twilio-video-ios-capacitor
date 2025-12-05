@@ -1,17 +1,9 @@
 {
-  "name": "twilio-video-ios-capacitor",
-  "description": "This plugin is used to make video calls using Twilio video platform on iOS",
-  "version": "0.2.5",
-  "author": "agodin3z <agodiin3z@gmail.com>",
+  "name": "@brunorodovicks/twilio-video-ios-capacitor",
+  "description": "Fork da Lib do twilio-video-ios-capacitor com suporte ao Capacitor 7.x",
+  "version": "1.0.0",
+  "author": "brunorodovicks <brunorodovicks@gmail.com>",
   "license": "MIT",
-  "homepage": "https://github.com/agodin3z/twilio-video-ios-capacitor#readme",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/agodin3z/twilio-video-ios-capacitor.git"
-  },
-  "bugs": {
-    "url": "https://github.com/agodin3z/twilio-video-ios-capacitor/issues"
-  },
   "main": "dist/esm/index.js",
   "types": "dist/esm/index.d.ts",
   "scripts": {
@@ -21,10 +13,10 @@
     "prepublishOnly": "npm run build"
   },
   "dependencies": {
-    "@capacitor/core": "^2.2.1"
+    "@capacitor/core": "^7.2.0"
   },
   "devDependencies": {
-    "typescript": "^3.4.3"
+    "typescript": "^5.1.6"
   },
   "files": [
     "dist/",
