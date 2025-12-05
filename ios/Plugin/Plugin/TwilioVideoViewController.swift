@@ -30,7 +30,7 @@ class TwilioVideoViewController: UIViewController {
     
     var accessToken: String = ""
     var roomName: String = ""
-    var bridge: CAPBridge?
+    var bridge: CAPBridgeProtocol?
     
 
     override func viewDidLoad() {

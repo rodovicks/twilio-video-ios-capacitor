@@ -33,7 +33,7 @@ public class TwilioVideoIosCapacitor: CAPPlugin {
             viewController.roomName = roomName
             viewController.accessToken = accessToken
             viewController.bridge = self.bridge
-            self.bridge.viewController.present(viewController, animated: true, completion: nil)
+            self.bridge?.viewController?.present(viewController, animated: true, completion: nil)
         
         }
         
@@ -42,7 +42,7 @@ public class TwilioVideoIosCapacitor: CAPPlugin {
     
     @objc public func disconnect(_ call: CAPPluginCall) {
         DispatchQueue.main.sync {
-            self.bridge.viewController.dismiss(animated: true, completion: nil);
+            self.bridge?.viewController?.dismiss(animated: true, completion: nil);
         }
         call.resolve()
     }
